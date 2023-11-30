@@ -1,7 +1,11 @@
-function DuckListCard(props) {
+function DuckListCard({ duck, handleDuckClick }) {
   return (
-    <img src={"#"} alt={"duck name goes here"} />
-  )
+    <img
+      src={duck.img_url}
+      alt={duck.name}
+      onClick={() => handleDuckClick(duck)}
+    />
+  );
 }
 
-export default DuckListCard
+export default DuckListCard;

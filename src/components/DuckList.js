@@ -1,13 +1,18 @@
-import React from 'react'
+import React from "react";
+import DuckListCard from "./DuckListCard";
 
-function DuckList(props) {
+function DuckList({ ducks, handleDuckClick }) {
   return (
-
     <div className="duck-nav">
-      {/* display the duck card components here */}
+      {ducks.map((duck) => (
+        <DuckListCard
+          key={duck.id}
+          duck={duck}
+          handleDuckClick={handleDuckClick}
+        />
+      ))}
     </div>
-
-  )
+  );
 }
 
-export default DuckList
+export default DuckList;
